@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+:root {
+  --blue: #4099da;
+  --white: #fff;
+  --green: #2bb34e;
+  --red: #ca3c40;
+  --dark-red: #6a1b1e;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.solution,
+.answer {
+  position: relative;
+  width: 400px;
+  height: 300px;
+  outline: 1px solid black;
+}
+
+.answer img,
+.answer-top img {
+  width: 100%;
+}
+
+.solution:hover .answer-top {
+  display: block;
+}
+
+.answer-top {
+  display: none;
+  opacity: 50%;
+  position: absolute;
+  width: 400px;
+  height: 300px;
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+
+.answer-top img {
+  filter: invert(1);
+}
+
+.solution-1 {
+  background: var(--blue);
+  display: grid;
+  place-content: center;
+}
+
+.solution-1 .circle {
+  border: 25px solid var(--white);
+  border-radius: 50%;
+  width: 178px;
+  aspect-ratio: 1 / 1;
+  position: relative;
+}
+
+.solution-1 .circle:after {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 89px;
+  background: var(--white);
+  position: absolute;
+  top: -46px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.solution-2 {
+  background: var(--green);
+  display: grid;
+  place-content: center;
+}
+
+.solution-2 .circle {
+  border: 25px solid var(--white);
+  border-radius: 50%;
+  width: 178px;
+  aspect-ratio: 1 / 1;
+  position: relative;
+  translate: 5px 7px;
+  rotate: -45deg;
+}
+
+.solution-2 .circle:after {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 89px;
+  background: var(--white);
+  position: absolute;
+  top: -46.5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.solution-3 {
+  background: var(--red);
+  display: grid;
+  place-content: center;
+}
+
+.solution-3 .box {
+  border: 20px solid var(--dark-red);
+  width: 160px;
+  height: 60px;
+  position: relative;
+}
+.solution-3 .box:before,
+.solution-3 .box:after {
+  content: "";
+  width: 100px;
+  height: 120px;
+  position: absolute;
+  background: var(--dark-red);
+  bottom: 100%;
+  right: -20px;
+}
+
+.solution-3 .box:after {
+  bottom: none;
+  top: 100%;
+  left: -20px;
+}

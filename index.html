@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="solution solution-1">
+          <div class="circle"></div>
+        </div>
+        <div class="answer">
+          <img src="1.png" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="solution solution-2">
+          <div class="circle"></div>
+        </div>
+        <div class="answer">
+          <img src="2.png" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="solution solution-3">
+          <div class="box"></div>
+        </div>
+        <div class="answer">
+          <img src="3.png" />
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    (() => {
+      const $row = document.querySelectorAll(".row");
+
+      $row.forEach((row) => {
+        const $solution = row.querySelector(".solution");
+        const $answer = row.querySelector(".answer").cloneNode(true);
+        $answer.classList.add("answer-top");
+        $answer.classList.remove("answer");
+        $solution.prepend($answer);
+      });
+    })();
+  </script>
+</html>
