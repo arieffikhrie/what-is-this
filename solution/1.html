@@ -1,0 +1,32 @@
+<div class="circle"></div>
+<style>
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background: #4099da;
+    display: grid;
+    place-content: center;
+  }
+  .circle {
+    margin-top: 20px;
+    box-shadow: inset 0 0 0 25px #ffffff;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    position: relative;
+  }
+  .circle:after {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 80px;
+    background: #ffffff;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+</style>
